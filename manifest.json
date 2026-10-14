@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Oracle Screenshot Tracker",
+  "version": "1.0",
+
+  "description": "Automatically captures screenshots at a fixed interval.",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "alarms"
+  ],
+
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:5000/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.oracle.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

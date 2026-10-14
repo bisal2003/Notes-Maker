@@ -1,0 +1,224 @@
+/* ===== Base ===== */
+
+body {
+    width: 260px;
+    padding: 16px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 0 0 14px 0;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Interval / Folder input ===== */
+
+.setting-group {
+    margin-bottom: 12px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 12px;
+    color: #a0a0b8;
+    margin-bottom: 5px;
+}
+
+.setting-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #2d2d44;
+    border-radius: 6px;
+    background: #16213e;
+    color: #e0e0e0;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.setting-group input:focus {
+    border-color: #4a6cf7;
+}
+
+/* ===== Buttons ===== */
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.btn {
+    flex: 1;
+    padding: 9px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-start {
+    background: #4a6cf7;
+    color: #ffffff;
+}
+
+.btn-start:hover:not(:disabled) {
+    background: #3b5de7;
+}
+
+.btn-stop {
+    background: #e74c5a;
+    color: #ffffff;
+}
+
+.btn-stop:hover:not(:disabled) {
+    background: #d63d4a;
+}
+
+/* ===== Status indicator ===== */
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #16213e;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e74c5a;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+.status-dot.running {
+    background: #2ecc71;
+    box-shadow: 0 0 6px rgba(46, 204, 113, 0.5);
+}
+
+/* ===== Stats ===== */
+
+.stats {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    background: #16213e;
+    border-radius: 6px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 11px;
+    color: #a0a0b8;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ===== Notes section ===== */
+
+.notes-section {
+    margin-bottom: 12px;
+}
+
+.notes-section label {
+    display: block;
+    font-size: 12px;
+    color: #a0a0b8;
+    margin-bottom: 5px;
+}
+
+.notes-section textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #2d2d44;
+    border-radius: 6px;
+    background: #16213e;
+    color: #e0e0e0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    resize: vertical;
+    min-height: 60px;
+    transition: border-color 0.2s;
+}
+
+.notes-section textarea:focus {
+    border-color: #4a6cf7;
+}
+
+.btn-note {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 0;
+    background: #2ecc71;
+    color: #ffffff;
+    flex: none;
+}
+
+.btn-note:hover:not(:disabled) {
+    background: #27ae60;
+}
+
+.btn-note.saved {
+    background: #27ae60;
+}
+
+/* ===== Export button ===== */
+
+.btn-export {
+    width: 100%;
+    padding: 10px 0;
+    background: #e67e22;
+    color: #ffffff;
+    flex: none;
+    font-size: 13px;
+}
+
+.btn-export:hover:not(:disabled) {
+    background: #d35400;
+}
+
+.btn-export:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
